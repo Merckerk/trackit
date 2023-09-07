@@ -1,0 +1,11 @@
+git commands:
+
+to publish changes:
+git fetch => sync local repo to remote
+git pullout [branchname] => sync branch to remote
+
+git checkout -b [branchname] => make new branch
+git checkout [branchname] => go to another branch
+git add . => stage changes
+git commit -m "message" => describe ur changes here
+git push origin HEAD => push to branch (ch-check ni marckus for merge conflicts and shit)
