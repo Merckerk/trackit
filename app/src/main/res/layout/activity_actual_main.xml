@@ -72,7 +72,7 @@
             android:id="@+id/btn_sign_in"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Sign In"
+            android:text="Sign Up"
             app:layout_constraintBottom_toTopOf="@id/btn_forgot_password"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
