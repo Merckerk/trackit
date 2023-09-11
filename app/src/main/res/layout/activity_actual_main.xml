@@ -1,94 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/motionLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:padding="10dp"
+    app:layoutDescription="@xml/activity_actual_main_scene">
 
-    <!-- Container for Username and Password EditTexts -->
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/container_edit_text"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
-        app:layout_constraintBottom_toTopOf="@id/container_buttons"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_chainStyle="packed">
+    <!--  TrackIt Logo -->
 
-        <!-- Username EditText -->
-        <EditText
-            android:id="@+id/et_username"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:hint="Username"
-            app:layout_constraintBottom_toTopOf="@id/et_password"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    <!--  TrackIt Text -->
 
-        <!-- Password EditText -->
-        <EditText
-            android:id="@+id/et_password"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:hint="Password"
-            android:inputType="textPassword"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/et_username" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <!-- Container for Buttons -->
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/container_buttons"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+    <ImageView
+        android:id="@+id/trackitLogo"
+        android:layout_width="240dp"
+        android:layout_height="240dp"
+        android:src="@drawable/trackit_logo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/container_edit_text"
-        app:layout_constraintVertical_chainStyle="packed">
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <!-- Login Button -->
-        <Button
-            android:id="@+id/btn_login"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="Login"
-            app:layout_constraintBottom_toTopOf="@id/btn_sign_in"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@+id/trackitText"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:layout_constraintStart_toStartOf="@+id/trackitLogo"
+        app:srcCompat="@drawable/trackittext"
+        tools:layout_editor_absoluteY="214dp" />
 
-        <!-- Sign-in Button -->
-        <Button
-            android:id="@+id/btn_sign_in"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="Sign Up"
-            app:layout_constraintBottom_toTopOf="@id/btn_forgot_password"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/btn_login" />
 
-        <!-- Forgot Password Button -->
-        <Button
-            android:id="@+id/btn_forgot_password"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="Forgot Password"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/btn_sign_in" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.motion.widget.MotionLayout>
